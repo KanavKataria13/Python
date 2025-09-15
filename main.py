@@ -1,127 +1,132 @@
-## Question 1 
+import numpy as np
 
-#print("""Twinkle, twinkle, little star,
-#\tHow I wonder what you are!
-#\t\tUp above the world so high,
-#\t\tLike a diamond in the sky.
-#Twinkle, twinkle, little star,
-#\tHow I wonder what you are""")
+# Question 1
+arr1d = np.arange(5, 26)
 
-## Question 2 
+print("1.1:", arr1d)
 
-#first_name = input("Enter your first name: ")
-#last_name = input("Enter your last name: ")
-#print(last_name + " " + first_name)
+arr2d = np.random.randint(10, 51, size=(3, 4))
 
-## Question 3
+print("1.2:\n", arr2d)
 
-#import math
-#radius = float(input("Enter the radius of the circle: "))
-#area = math.pi * (radius ** 2)
-#print("The area of the circle is:", area)
+# Question 2
 
-## Question 4
+print("2.1 Shape:", arr1d.shape)
 
-#color_list = ["Red", "Green", "White", "Black"]
-#print("First color:", color_list[0])
-#print("Last color:", color_list[-1])
+print("2.1 Size:", arr1d.size)
 
-## Question 5
+print("2.1 Data type:", arr1d.dtype)
 
-#n = int(input("Enter an integer: "))
-#n1 = int(str(n))
-#n2 = int(str(n) * 2)  # "nn"
-#n3 = int(str(n) * 3)  # "nnn*
+print("2.2 Shape:", arr2d.shape)
 
-## Question 6
+print("2.2 Size:", arr2d.size)
 
-#numbers = input("Enter numbers separated by commas: ")
-#number_list = numbers.split(",")
-#number_tuple = tuple(number_list)
-#print("List:", number_list)
-#print("Tuple:", number_tuple)
+print("2.2 Data type:", arr2d.dtype)
 
-## Question 7
+# Question 3
 
-#celsius = float(input("Enter temperature in Celsius: "))
-#fahrenheit = (celsius * 9/5) + 32
-#print(f"{celsius}°C is equal to {fahrenheit}°F")
+array1 = np.array([2, 4, 6, 8, 10])
 
-## Question 8 
+array2 = np.array([1, 3, 5, 7, 9])
 
-#a = int(input("Enter first number: "))
-#b = int(input("Enter second number: "))
-#print(f"Before swapping: a = {a}, b = {b}")
-#a, b = b, a
-#a += 1
-#print(f"After swapping and incrementing 'a': a = {a}, b = {b}")
+print("3.2 Addition:", array1 + array2)
 
-## Question 9 
+print("3.2 Subtraction:", array1 - array2)
 
-#num = int(input("Enter a number: "))
-#if num % 2 == 0:
- #   print(f"{num} is Even")
-#else:
- #   print(f"{num} is Odd")
- 
-## Question 10
+print("3.2 Multiplication:", array1 * array2)
 
-#year = int(input("Enter a year: "))
-#if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-#    print(f"{year} is a Leap Year")
-#else:
- #   print(f"{year} is Not a Leap Year")
+print("3.2 Division:", array1 / array2)
 
-## Question 11
+# Question 4
 
-#import math
-#x1 = float(input("Enter x1: "))
-#y1 = float(input("Enter y1: "))
-#x2 = float(input("Enter x2: "))
-#y2 = float(input("Enter y2: "))
-#distance = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
-#print(f"Euclidean distance between ({x1}, {y1}) and ({x2}, {y2}) is {distance}")
+arr_2d = np.arange(1, 10).reshape((3, 3))
 
-## Question 12
+print("4.1:\n", arr_2d)
 
-#angle1 = float(input("Enter first angle: "))
-#angle2 = float(input("Enter second angle: "))
-#angle3 = float(input("Enter third angle: "))
-#if angle1 > 0 and angle2 > 0 and angle3 > 0 and (angle1 + angle2 + angle3) == 180:
- #   print("The angles can form a triangle.")
-#else:
-#    print("The angles cannot form a triangle.")
+print("4.2 Multiplied by 5:\n", arr_2d * 5)
+# Question 5
 
-## Question 13
+arr4x4 = np.arange(10, 26).reshape((4, 4))
 
-#principal = float(input("Enter the principal amount: "))
-#rate = float(input("Enter the annual interest rate (in %): "))
-#time = float(input("Enter the time (in years): "))
-#n = int(input("Enter the number of times interest is compounded per year: "))
-#amount = principal * (1 + (rate / 100) / n) ** (n * time)
-#compound_interest = amount - principal
-#print(f"Compound Interest: {compound_interest}")
-#print(f"Total Amount: {amount}")
+print("5.1:\n", arr4x4)
 
-## Question 14
+print("5.2 Second row:", arr4x4[1])
 
-#N = int(input("Enter a positive integer: "))
-#if N <= 1:
- #   print(f"{N} is not a Prime Number")
-#else:
- #   is_prime = True
-  #  for i in range(2, int(N**0.5) + 1):  
-   #     if N % i == 0:
-    #        is_prime = False
-     #       break
-    
-    #if is_prime:
-    #    print(f"{N} is a Prime Number")
-    #else:
-     #   print(f"{N} is not a Prime Number")
+print("5.2 Last column:", arr4x4[:, -1])
 
-## Question 15
+arr4x4[0] = 0
 
-#N = int(input("Enter a positive integer: "))
-#sum_of_squares = (N * (N + 1) * (2 * N + 1)) // 6
-#print(f"Sum of squares from 1² to {N}² is: {sum_of_squares}")
+print("5.3 First row replaced with zeros:\n", arr4x4)
+
+# Question 6
+
+arr_bool = np.random.randint(20, 41, size=10)
+
+print("6.1:", arr_bool)
+
+print("6.2 Elements > 30:", arr_bool[arr_bool > 30])
+
+# Question 7
+
+arr_1d12 = np.arange(11, 23)
+
+arr_2d3x4 = arr_1d12.reshape((3, 4))
+
+print("7.1:", arr_1d12)
+
+print("7.2 Reshaped (3x4):\n", arr_2d3x4)
+# Question 8
+
+A = np.array([[1, 2], [3, 4]])
+
+B = np.array([[5, 6], [7, 8]])
+
+print("8.1 Matrix A:\n", A)
+
+print("8.1 Matrix B:\n", B)
+
+print("8.2 Multiplication:\n", np.dot(A, B))
+
+print("8.2 Transpose of A:\n", A.T)
+
+# Question 9
+
+arr_stats = np.random.randint(10, 61, size=15)
+
+print("9.1 Array:", arr_stats)
+
+print("9.2 Mean:", np.mean(arr_stats))
+
+print("9.2 Median:", np.median(arr_stats))
+
+print("9.2 Std Dev:", np.std(arr_stats))
+
+# Question 10
+
+A = np.array([[2, 1, 3], [0, 5, 6], [7, 8, 9]])
+
+print("10.1 Matrix A:\n", A)
+
+print("10.2 Determinant:", np.linalg.det(A))
+
+print("10.2 Inverse:\n", np.linalg.inv(A))
+
+eigvals, eigvecs = np.linalg.eig(A)
+
+print("10.2 Eigenvalues:", eigvals)
+
+print("10.2 Eigenvectors:\n", eigvecs)
+
+# Question 11
+
+positions = np.array([[0, 0], [2, 3], [4, 7], [7, 10], [10, 15]])
+
+euclidean_distance = np.linalg.norm(positions[-1] - positions[0])
+
+print("11.1 Euclidean distance:", euclidean_distance)
+
+step_distances = np.linalg.norm(np.diff(positions, axis=0), axis=1)
+
+total_distance = np.sum(step_distances)
+
+print("11.2 Total distance step-by-step:", total_distance)
